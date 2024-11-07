@@ -1,0 +1,16 @@
+# 配置protoc生成规则
+version: v2
+
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/alec404/kratos-bootstrap/api/gen/go
+
+plugins:
+  - remote: buf.build/protocolbuffers/go:v1.35.1
+    out: gen/go
+    opt: paths=source_relative
+
+inputs:
+  - directory: proto
