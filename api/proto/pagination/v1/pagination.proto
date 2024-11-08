@@ -6,7 +6,7 @@ package pagination.v1;
 import "google/protobuf/any.proto";
 import "google/protobuf/field_mask.proto";
 
-option go_package = "github.com/alec404/kratos-bootstrap/api/gen/go/pagination/v1";
+option go_package = "github.com/alec404/kratos-proto/api/gen/go/pagination/v1";
 
 // 分页通用请求
 message PagingRequest {

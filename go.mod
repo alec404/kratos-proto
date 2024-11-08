@@ -1,4 +1,4 @@
-module github.com/alec404/kratos-bootstrap
+module github.com/alec404/kratos-proto
 
 go 1.23.0
 
