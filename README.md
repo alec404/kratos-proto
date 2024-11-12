@@ -1,1 +1,1 @@
-# kratos-bootstrap
+# kratos-proto
