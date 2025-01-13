@@ -21,6 +21,16 @@ message Data {
     int32 max_idle_connections = 20; // 连接池最大空闲连接数
     int32 max_open_connections = 21; // 连接池最大打开连接数
     google.protobuf.Duration connection_max_lifetime = 22; // 连接可重用的最大时间长度
+
+    // 从库配置
+    message Replica {
+      string source = 1;  // 从库数据源（DSN字符串）
+      int32 max_idle_connections = 2; // 连接池最大空闲连接数
+      int32 max_open_connections = 3; // 连接池最大打开连接数
+      google.protobuf.Duration connection_max_lifetime = 4; // 连接可重用的最大时间长度
+    }
+
+    repeated Replica replicas = 30; // 从库列表
   }
 
   // redis
