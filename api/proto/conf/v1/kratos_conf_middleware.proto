@@ -55,11 +55,14 @@ message Middleware {
   HttpCache http_cache = 10;
   repeated XSecAuth x_sec_auth = 11;
 
+  bool enable_exception = 12; // 异常捕捉开关
+  bool enable_trace_attributes = 13; // 链路追踪属性开关
+
 }
 
 
 message SecConf {
   string sec = 1; // x-sec 的密钥
-  repeated string ip_whitelist = 2;   // IP 白名单
+  repeated string ip_whitelist = 2;   // IP 白名单, 支持CIDR，（可选）
   repeated string allowed_paths = 3;  // 允许访问的路径
 }
