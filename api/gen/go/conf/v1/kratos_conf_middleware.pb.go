@@ -168,7 +168,7 @@ type SecConf struct {
 	unknownFields protoimpl.UnknownFields
 
 	Sec          string   `protobuf:"bytes,1,opt,name=sec,proto3" json:"sec,omitempty"`                                       // x-sec 的密钥
-	IpWhitelist  []string `protobuf:"bytes,2,rep,name=ip_whitelist,json=ipWhitelist,proto3" json:"ip_whitelist,omitempty"`    // IP 白名单
+	IpWhitelist  []string `protobuf:"bytes,2,rep,name=ip_whitelist,json=ipWhitelist,proto3" json:"ip_whitelist,omitempty"`    // IP 白名单, 支持CIDR，（可选）
 	AllowedPaths []string `protobuf:"bytes,3,rep,name=allowed_paths,json=allowedPaths,proto3" json:"allowed_paths,omitempty"` // 允许访问的路径
 }
 

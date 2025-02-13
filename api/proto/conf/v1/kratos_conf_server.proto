@@ -42,6 +42,17 @@ message Server {
     string ca_file = 4;  // CA证书文件
   }
 
+  // RabbitMQ
+  message RabbitMQ {
+    repeated string endpoints = 1;  // 对端网络地址
+  }
+
+  // RPC
+
   HTTP http = 1;  // HTTP服务
   GRPC grpc = 2;  // gRPC服务
+
+  //  Message Queue
+
+  RabbitMQ rabbitmq = 10; // RabbitMQ服务
 }
