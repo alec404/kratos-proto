@@ -8,6 +8,7 @@ import "conf/v1/kratos_conf_server.proto";
 import "conf/v1/kratos_conf_client.proto";
 import "conf/v1/kratos_conf_logger.proto";
 import "conf/v1/kratos_conf_notify.proto";
+import "conf/v1/kratos_conf_metrics.proto";
 
 option go_package = "github.com/alec404/kratos-proto/api/gen/go/conf/v1";
 
@@ -19,4 +20,5 @@ message Bootstrap {
   Tracer trace = 4;
   Logger logger = 5;
   Notification notify = 9;
+  Metrics metrics = 10;
 }
